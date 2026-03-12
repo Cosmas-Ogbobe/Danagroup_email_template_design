@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOP Portal Dashboard</title>
+
+<link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/umd/lucide.js">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI",sans-serif;
+background:#f4f7fb;
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:240px;
+background:#0f172a;
+color:white;
+height:100vh;
+padding:25px 20px;
+position:fixed;
+}
+
+.sidebar h2{
+margin-bottom:40px;
+font-size:20px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:12px 10px;
+margin-bottom:8px;
+border-radius:6px;
+cursor:pointer;
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.sidebar li:hover{
+background:#1e293b;
+}
+
+/* MAIN CONTENT */
+
+.main{
+margin-left:240px;
+width:100%;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.search input{
+padding:10px 15px;
+width:300px;
+border-radius:6px;
+border:1px solid #ddd;
+}
+
+/* DASHBOARD STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.stat-card{
+padding:20px;
+border-radius:10px;
+color:white;
+font-weight:600;
+}
+
+.blue{background:linear-gradient(135deg,#2563eb,#1e40af);}
+.green{background:linear-gradient(135deg,#22c55e,#15803d);}
+.orange{background:linear-gradient(135deg,#fb923c,#ea580c);}
+.purple{background:linear-gradient(135deg,#a855f7,#7e22ce);}
+
+.stat-card h3{
+font-size:28px;
+margin-top:10px;
+}
+
+/* SOP SECTION */
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+padding:0 30px 30px 30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#1e40af;
+}
+
+.card ul{
+list-style:none;
+}
+
+.card li{
+padding:8px 0;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>SOP Portal</h2>
+
+<ul>
+
+<li><i data-lucide="layout-dashboard"></i> Dashboard</li>
+
+<li><i data-lucide="folder"></i> Departments</li>
+
+<li><i data-lucide="book-open"></i> SOP Library</li>
+
+<li><i data-lucide="check-circle"></i> Approvals</li>
+
+<li><i data-lucide="graduation-cap"></i> Training</li>
+
+<li><i data-lucide="help-circle"></i> Support</li>
+
+</ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<h3>Standard Operating Procedures</h3>
+
+<div class="search">
+<input type="text" placeholder="Search SOPs...">
+</div>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat-card blue">
+Total SOPs
+<h3>245</h3>
+</div>
+
+<div class="stat-card green">
+Departments
+<h3>12</h3>
+</div>
+
+<div class="stat-card orange">
+Pending Approvals
+<h3>8</h3>
+</div>
+
+<div class="stat-card purple">
+Trainings
+<h3>24</h3>
+</div>
+
+</div>
+
+
+<!-- SOP CARDS -->
+
+<div class="container">
+
+<div class="card">
+
+<h3>Operations</h3>
+
+<ul>
+<li>Production Process SOPs</li>
+<li>Equipment Maintenance</li>
+<li>Safety Procedures</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Human Resources</h3>
+
+<ul>
+<li>Recruitment & Onboarding</li>
+<li>Leave Policies</li>
+<li>Employee Conduct</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Finance</h3>
+
+<ul>
+<li>Expense Reimbursement</li>
+<li>Budget Approval</li>
+<li>Invoice Processing</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>IT & Security</h3>
+
+<ul>
+<li>Data Backup</li>
+<li>Access Control</li>
+<li>System Recovery</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Customer Service</h3>
+
+<ul>
+<li>Complaint Handling</li>
+<li>Service Escalation</li>
+<li>Quality Assurance</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+</html>
